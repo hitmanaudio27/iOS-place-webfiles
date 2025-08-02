@@ -1,132 +1,107 @@
-<!DOCTYPE html>
-<html lang="en-AU">
+Preview
+Code
+Thinking
+Copy<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="Io - Music Producer. Interactive portfolio showcasing cutting-edge electronic music with enterprise-grade security.">
-    
-    <!-- Enhanced Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-abc123xyz' 'strict-dynamic' https://cdn.jsdelivr.net; style-src 'self' 'nonce-abc123xyz' https://fonts.googleapis.com; img-src 'self' data: https://cdn.jsdelivr.net; media-src 'self' blob:; connect-src 'self' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; report-uri /csp-report">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), usb=()">
-    
-    <!-- HSTS Ready (server-side implementation required) -->
-    <!-- Strict-Transport-Security: max-age=31536000; includeSubDomains; preload -->
-    
-    <title>Io - Music Producer (Security Hardened)</title>
-    
-    <!-- Optimized font loading with SRI -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-rKiHiNdOQ5P9fzWmhRYGz8k8K2j8Z8K8K2j8Z8K8K2j8Z8K8K2j8Z8K8K2j8Z8K8" crossorigin="anonymous">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" crossorigin="anonymous"></noscript>
-    
-    <!-- Secure favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23fff'>IO</text></svg>">
-    
-    <!-- Three.js with SRI -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js" 
-            integrity="sha384-OKqvwhVYFnx+8rB7lfKQbY7WpA0NlmTx9wMh8MNRhQz+h5Fvj+3wJRKvjJ4g2L8g" 
-            crossorigin="anonymous"
-            nonce="abc123xyz"></script>
-    
-    <!-- Vanta.js effects with SRI -->
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js" 
-            integrity="sha384-JGtQKJPVPrYEqKkrNSQU5K2VQIhbJ6Hm5HkbJ6Hm5HkbJ6Hm5HkbJ6Hm5HkbJ6Hm" 
-            crossorigin="anonymous"
-            nonce="abc123xyz"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js" 
-            integrity="sha384-MNwBVlJ4b2bJ6nOqYxGh5bJpnFhJ4b2bJ6nOqYxGh5bJpnFhJ4b2bJ6nOqYxGh5b" 
-            crossorigin="anonymous"
-            nonce="abc123xyz"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.dots.min.js" 
-            integrity="sha384-NkFhbJ6nOqYxGh5bJpnFhMNwBVlJ4b2bJ6nOqYxGh5bJpnFhJ4b2bJ6nOqYxGh5b" 
-            crossorigin="anonymous"
-            nonce="abc123xyz"></script>
-    
-    <style nonce="abc123xyz">
-        /* CSS Reset with security considerations */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Io - Music Producer. Interactive portfolio showcasing cutting-edge electronic music with immersive 3D experiences.">
+    <meta name="keywords" content="Io, music producer, electronic music, interactive portfolio, 3D audio experience">
+    <meta name="author" content="Io Music Productions">
+    <meta name="robots" content="index, follow">
+    <title>Io - Music Producer | Interactive Portfolio (Critical Fixes Applied)</title>
 
+    <!-- CDN Libraries with jsDelivr -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Three.js and Vanta.js - Proper Loading Order -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
+
+    <style>
         :root {
             --primary-orange: #ff6b35;
             --primary-blue: #4dd0e1;
             --accent-purple: #9c27b0;
             --accent-pink: #e91e63;
-            --penumbra-primary: #1a237e;
-            --penumbra-secondary: #3949ab;
-            --veridian-primary: #2e7d32;
-            --veridian-secondary: #558b2f;
-            --fever-primary: #0277bd;
-            --fever-secondary: #0288d1;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
+            --dark-bg: #000000;
+            --text-primary: #ffffff;
         }
 
         body {
-            font-family: 'Space Mono', monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
+            font-family: 'Space Mono', monospace;
+            cursor: none;
+            overflow: auto; /* FIXED: was hidden */
+            background: var(--dark-bg);
+            color: var(--text-primary);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Security: Disable text selection on interactive elements */
-        .interactive {
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
+        /* Custom Cursor */
+        .custom-cursor {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+            will-change: transform;
+            opacity: 1;
         }
 
-        /* Secure full-screen sections */
-        .section {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .custom-cursor.hover {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 107, 53, 0.3);
+            border: 2px solid rgba(255, 107, 53, 0.8);
         }
 
-        .section-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            padding: 2rem;
-            max-width: 1200px;
-            width: 100%;
+        .custom-cursor.hidden {
+            opacity: 0;
         }
 
-        /* Hero Section - IO Landing */
-        #hero {
-            background: radial-gradient(ellipse at center, #1a1a1a 0%, #000 100%);
+        /* Hide cursor on touch devices */
+        @media (hover: none) and (pointer: coarse) {
+            body { cursor: auto !important; }
+            .custom-cursor { display: none !important; }
         }
 
-        /* Secure background effects */
-        .bg-effect {
+        /* Section Background for Vanta */
+        .section-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
             z-index: 1;
         }
 
-        /* IO Logo with security hardening */
+        /* Glass effect */
+        .glass-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Logo styles */
         .logo {
-            font-family: 'Orbitron', monospace, system-ui;
-            font-size: clamp(6rem, 15vw, 20rem);
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(4rem, 15vw, 12rem);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -0.05em;
@@ -142,10 +117,8 @@
             -webkit-text-fill-color: transparent;
             animation: shimmer 3s ease-in-out infinite;
             cursor: pointer;
-            position: relative;
-            will-change: transform;
             transition: transform 0.1s ease-out;
-            filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.2));
+            filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.3));
         }
 
         .logo:hover {
@@ -174,911 +147,546 @@
             90% { transform: translate(1px, 1px) rotate(0deg); }
         }
 
-        /* Secure scroll indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
-        }
-
-        /* Secure navigation */
-        .nav-dots {
+        /* Performance Badge */
+        .performance-badge {
             position: fixed;
-            right: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .nav-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            background: transparent;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .nav-dot.active {
-            background: #fff;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        /* Album sections */
-        .album-section {
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.8);
             color: #fff;
-            position: relative;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 12px;
+            border: 1px solid #333;
         }
 
-        .album-title {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .album-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Secure audio player */
-        .audio-player {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 12px;
-            padding: 2rem;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .audio-controls {
+        /* Audio Visualizer */
+        .audio-visualizer {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .play-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: none;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-orange));
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-
-        .play-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .progress-container {
-            flex: 1;
-            height: 6px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-orange));
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-
-        .time-display {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            min-width: 80px;
-            text-align: right;
-        }
-
-        /* Secure waveform visualization */
-        .waveform {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2px;
+            align-items: flex-end;
+            gap: 3px;
             height: 40px;
-            margin-top: 1rem;
+            justify-content: center;
         }
 
-        .wave-bar {
-            width: 3px;
+        .visualizer-bar {
+            width: 4px;
             background: linear-gradient(to top, var(--primary-blue), var(--primary-orange));
             border-radius: 2px;
-            opacity: 0.6;
-            animation: wave 1s ease-in-out infinite;
+            animation: wave 0.8s ease-in-out infinite;
+            opacity: 0.7;
         }
 
-        .wave-bar:nth-child(odd) { animation-delay: 0.1s; }
-        .wave-bar:nth-child(even) { animation-delay: 0.2s; }
+        .visualizer-bar:nth-child(1) { animation-delay: 0.1s; }
+        .visualizer-bar:nth-child(2) { animation-delay: 0.2s; }
+        .visualizer-bar:nth-child(3) { animation-delay: 0.3s; }
+        .visualizer-bar:nth-child(4) { animation-delay: 0.4s; }
+        .visualizer-bar:nth-child(5) { animation-delay: 0.5s; }
 
         @keyframes wave {
             0%, 100% { height: 8px; }
-            50% { height: 32px; }
+            50% { height: 35px; }
         }
 
-        /* Color schemes for each album */
-        #penumbra {
-            --section-primary: var(--penumbra-primary);
-            --section-secondary: var(--penumbra-secondary);
+        /* Particle styles */
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            pointer-events: none;
         }
 
-        #veridian {
-            --section-primary: var(--veridian-primary);
-            --section-secondary: var(--veridian-secondary);
-        }
-
-        #mild-fever {
-            --section-primary: var(--fever-primary);
-            --section-secondary: var(--fever-secondary);
-        }
-
-        /* Responsive design with security considerations */
-        @media (max-width: 768px) {
-            .nav-dots {
-                right: 1rem;
-            }
-            
-            .section-content {
-                padding: 1rem;
-            }
-            
-            .album-title {
-                font-size: clamp(2rem, 10vw, 4rem);
-            }
-            
-            .audio-player {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Security: Prevent text selection on sensitive elements */
-        .logo, .nav-dots, .audio-controls {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        /* Loading state with security */
-        .loading {
+        /* Loading screen */
+        #loader {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background: #000;
-            z-index: 10000;
+            z-index: 9999;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            flex-direction: column;
             transition: opacity 0.5s ease;
         }
 
-        .loading.hidden {
+        #loader.fade-out {
             opacity: 0;
             pointer-events: none;
         }
 
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-top-color: var(--primary-blue);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Accessibility improvements */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        /* Focus indicators for accessibility */
-        .logo:focus,
-        .nav-dot:focus,
-        .play-btn:focus {
-            outline: 2px solid var(--primary-blue);
-            outline-offset: 4px;
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: clamp(3rem, 20vw, 8rem);
+            }
         }
 
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
-            * {
+            *, ::before, ::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
-            
-            html {
-                scroll-behavior: auto;
-            }
         }
     </style>
 </head>
-<body>
-    <!-- Loading screen -->
-    <div class="loading" id="loading">
-        <div class="spinner"></div>
-        <span class="sr-only">Loading Io music portfolio...</span>
+<body class="bg-black text-white">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Performance Badge (hidden by default, show with ?debug=fps) -->
+    <div class="performance-badge hidden" id="performanceBadge">
+        <i class="fas fa-tachometer-alt mr-1"></i><span id="fpsCounter">60 FPS</span>
     </div>
 
-    <!-- Skip link for accessibility -->
-    <a href="#main" class="sr-only" aria-describedby="skip-hint">Skip to main content</a>
-    <div id="skip-hint" class="sr-only">Navigate to main portfolio content</div>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-400 mx-auto mb-4"></div>
+            <p class="text-xl font-mono">Initializing Audio Experience...</p>
+        </div>
+    </div>
 
-    <!-- Navigation dots -->
-    <nav class="nav-dots" aria-label="Section navigation">
-        <div class="nav-dot active" data-section="hero" aria-label="Navigate to hero section" tabindex="0" role="button"></div>
-        <div class="nav-dot" data-section="penumbra" aria-label="Navigate to Penumbra album" tabindex="0" role="button"></div>
-        <div class="nav-dot" data-section="veridian" aria-label="Navigate to Veridian album" tabindex="0" role="button"></div>
-        <div class="nav-dot" data-section="mild-fever" aria-label="Navigate to Mild Fever album" tabindex="0" role="button"></div>
-    </nav>
+    <!-- Main Content -->
+    <div class="relative min-h-screen flex flex-col">
+        <!-- Vanta Background Container -->
+        <div id="vanta-bg" class="section-bg"></div>
 
-    <!-- Main content -->
-    <main id="main" role="main">
-        <!-- Hero Section -->
-        <section id="hero" class="section">
-            <div class="section-content">
-                <h1 class="logo interactive" tabindex="0" role="button" aria-label="Io - Music Producer">IO</h1>
-                <div class="scroll-indicator">Scroll to explore albums</div>
-            </div>
-        </section>
-
-        <!-- Penumbra Album -->
-        <section id="penumbra" class="section album-section">
-            <div class="bg-effect" data-vanta="waves"></div>
-            <div class="section-content">
-                <h2 class="album-title">Penumbra</h2>
-                <p class="album-description">Deep cool soul, groove, contemplative, world class</p>
-                
-                <div class="audio-player">
-                    <div class="audio-controls">
-                        <button class="play-btn" aria-label="Play Penumbra track">
-                            <span class="play-icon">▶</span>
-                        </button>
-                        <div class="progress-container">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <div class="time-display">0:00 / 0:00</div>
-                    </div>
-                    
-                    <div class="waveform" aria-hidden="true">
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                    </div>
-                    
-                    <!-- Secure audio element with validation -->
-                    <audio class="audio-element" preload="metadata" aria-label="Penumbra audio track">
-                        <source src="./audio/penumbra-track.mp3" type="audio/mpeg">
-                        <source src="./audio/penumbra-track.ogg" type="audio/ogg">
-                        <p>Your browser does not support HTML5 audio. <a href="./audio/penumbra-track.mp3">Download the track</a>.</p>
-                    </audio>
+        <!-- Navigation -->
+        <nav class="relative z-10 p-6">
+            <div class="flex justify-between items-center">
+                <div class="text-sm font-mono opacity-70">
+                    <i class="fas fa-music mr-2"></i>IO MUSIC PRODUCTIONS
+                </div>
+                <div class="flex gap-4 text-sm font-mono opacity-70">
+                    <span><i class="fas fa-volume-up mr-1"></i>Audio ON</span>
+                    <span><i class="fas fa-eye mr-1"></i>3D Mode</span>
                 </div>
             </div>
-        </section>
+        </nav>
 
-        <!-- Veridian Album -->
-        <section id="veridian" class="section album-section">
-            <div class="bg-effect" data-vanta="net"></div>
-            <div class="section-content">
-                <h2 class="album-title">Veridian</h2>
-                <p class="album-description">SAULT-inspired funk, R&B, soul excellence in production, moody</p>
+        <!-- Main Hero Section -->
+        <main class="flex-1 flex items-center justify-center relative z-10 px-6">
+            <div class="text-center">
+                <!-- Main Logo -->
+                <h1 class="logo mb-8" id="mainLogo" role="img" aria-label="IO - Music Producer Logo, click to explore">
+                    IO
+                </h1>
                 
-                <div class="audio-player">
-                    <div class="audio-controls">
-                        <button class="play-btn" aria-label="Play Veridian track">
-                            <span class="play-icon">▶</span>
-                        </button>
-                        <div class="progress-container">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <div class="time-display">0:00 / 0:00</div>
-                    </div>
-                    
-                    <div class="waveform" aria-hidden="true">
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                    </div>
-                    
-                    <audio class="audio-element" preload="metadata" aria-label="Veridian audio track">
-                        <source src="./audio/veridian-track.mp3" type="audio/mpeg">
-                        <source src="./audio/veridian-track.ogg" type="audio/ogg">
-                        <p>Your browser does not support HTML5 audio. <a href="./audio/veridian-track.mp3">Download the track</a>.</p>
-                    </audio>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mild Fever Album -->
-        <section id="mild-fever" class="section album-section">
-            <div class="bg-effect" data-vanta="dots"></div>
-            <div class="section-content">
-                <h2 class="album-title">Mild Fever</h2>
-                <p class="album-description">Early 2000s inspired, LCD Soundsystem meets Kasabian</p>
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl font-mono mb-8 opacity-80">
+                    Electronic Music Producer
+                </p>
                 
-                <div class="audio-player">
-                    <div class="audio-controls">
-                        <button class="play-btn" aria-label="Play Mild Fever track">
-                            <span class="play-icon">▶</span>
-                        </button>
-                        <div class="progress-container">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <div class="time-display">0:00 / 0:00</div>
-                    </div>
-                    
-                    <div class="waveform" aria-hidden="true">
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                        <div class="wave-bar"></div>
-                    </div>
-                    
-                    <audio class="audio-element" preload="metadata" aria-label="Mild Fever audio track">
-                        <source src="./audio/mild-fever-track.mp3" type="audio/mpeg">
-                        <source src="./audio/mild-fever-track.ogg" type="audio/ogg">
-                        <p>Your browser does not support HTML5 audio. <a href="./audio/mild-fever-track.mp3">Download the track</a>.</p>
-                    </audio>
+                <!-- Audio Visualizer -->
+                <div class="audio-visualizer mb-12" aria-hidden="true">
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
                 </div>
+                
+                <!-- Explore Button -->
+                <button id="exploreBtn" 
+                        type="button" 
+                        aria-label="Explore Music Universe - Navigate to album portfolio"
+                        class="glass-card px-8 py-4 border-2 border-orange-400 text-orange-400 hover:text-white font-mono uppercase tracking-wider text-lg">
+                    <i class="fas fa-play mr-3"></i>Explore Music Universe
+                </button>
+                
+                <!-- Hint Text -->
+                <p class="text-sm font-mono opacity-50 mt-4">
+                    Click the logo above for interactive experience
+                </p>
             </div>
-        </section>
-    </main>
+        </main>
 
-    <!-- Secure JavaScript implementation -->
-    <script nonce="abc123xyz">
-        (function() {
-            'use strict';
-            
-            // Security: CSP violation reporting
-            if ('securitypolicyviolation' in document) {
-                document.addEventListener('securitypolicyviolation', function(e) {
-                    // In production, send to your CSP reporting endpoint
-                    console.warn('CSP violation:', e.violatedDirective, e.blockedURI);
-                });
+        <!-- Footer -->
+        <footer class="relative z-10 p-6 text-center">
+            <div class="flex justify-center gap-8 text-sm font-mono opacity-60">
+                <span><i class="fas fa-headphones mr-2"></i>Best with headphones</span>
+                <span><i class="fas fa-desktop mr-2"></i>WebGL Enabled</span>
+                <span><i class="fas fa-mobile-alt mr-2"></i>Mobile Optimized</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Particles Container -->
+    <div id="particlesContainer" class="fixed inset-0 pointer-events-none z-20"></div>
+
+    <script>
+        'use strict';
+
+        // Performance Monitor Class
+        class PerformanceMonitor {
+            constructor() {
+                this.fps = 60;
+                this.frameCount = 0;
+                this.lastTime = performance.now();
+                this.fpsCounter = document.getElementById('fpsCounter');
+                this.isDebugMode = new URLSearchParams(window.location.search).has('debug') && 
+                                  window.location.search.includes('fps');
+                
+                if (this.isDebugMode) {
+                    document.getElementById('performanceBadge').classList.remove('hidden');
+                    this.startMonitoring();
+                }
             }
 
-            // Secure utility functions
-            const Utils = {
-                // HTML escape function to prevent XSS
-                escapeHtml: function(unsafe) {
-                    return unsafe
-                        .replace(/&/g, "&amp;")
-                        .replace(/</g, "&lt;")
-                        .replace(/>/g, "&gt;")
-                        .replace(/"/g, "&quot;")
-                        .replace(/'/g, "&#039;");
-                },
-
-                // Validate audio file types
-                isValidAudioType: function(file) {
-                    const allowedTypes = ['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/ogg'];
-                    const allowedExtensions = ['.mp3', '.wav', '.ogg'];
+            startMonitoring() {
+                const monitor = () => {
+                    this.frameCount++;
+                    const currentTime = performance.now();
                     
-                    if (file.type) {
-                        return allowedTypes.includes(file.type);
-                    }
-                    
-                    const extension = file.name.toLowerCase().substring(file.name.lastIndexOf('.'));
-                    return allowedExtensions.includes(extension);
-                },
-
-                // Rate limiting for requests
-                rateLimiter: {
-                    requests: new Map(),
-                    limit: 100,
-                    window: 60000, // 1 minute
-
-                    isAllowed: function(key) {
-                        const now = Date.now();
-                        const userRequests = this.requests.get(key) || [];
-                        
-                        // Clean old requests
-                        const validRequests = userRequests.filter(time => now - time < this.window);
-                        
-                        if (validRequests.length >= this.limit) {
-                            return false;
-                        }
-                        
-                        validRequests.push(now);
-                        this.requests.set(key, validRequests);
-                        return true;
-                    }
-                }
-            };
-
-            // Secure error handling
-            const ErrorHandler = {
-                log: function(error, context) {
-                    // In production, send to secure logging endpoint
-                    console.error('Error in', context, error);
-                },
-
-                handleSecurely: function(error, userMessage) {
-                    this.log(error, 'Application');
-                    // Show generic message to user, log detailed error securely
-                    return userMessage || 'An error occurred. Please try again.';
-                }
-            };
-
-            // Loading screen manager
-            const LoadingManager = {
-                init: function() {
-                    const loading = document.getElementById('loading');
-                    
-                    // Security: Set timeout to prevent hanging
-                    const hideLoading = () => {
-                        if (loading) {
-                            loading.classList.add('hidden');
-                            setTimeout(() => loading.remove(), 500);
-                        }
-                    };
-
-                    // Hide loading after resources load or timeout
-                    if (document.readyState === 'complete') {
-                        hideLoading();
-                    } else {
-                        window.addEventListener('load', hideLoading);
-                        // Security: Force hide after 10 seconds
-                        setTimeout(hideLoading, 10000);
-                    }
-                }
-            };
-
-            // Secure Vanta effects manager
-            const VantaManager = {
-                effects: new Map(),
-                currentEffect: null,
-
-                init: function() {
-                    // Check if Three.js loaded securely
-                    if (typeof THREE === 'undefined') {
-                        ErrorHandler.log('Three.js failed to load', 'VantaManager');
-                        return;
-                    }
-
-                    this.setupIntersectionObserver();
-                },
-
-                setupIntersectionObserver: function() {
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const vantaType = entry.target.dataset.vanta;
-                                if (vantaType) {
-                                    this.loadEffect(entry.target, vantaType);
-                                }
-                            }
-                        });
-                    }, {
-                        threshold: 0.1,
-                        rootMargin: '100px 0px'
-                    });
-
-                    document.querySelectorAll('[data-vanta]').forEach(el => {
-                        observer.observe(el);
-                    });
-                },
-
-                loadEffect: function(element, type) {
-                    try {
-                        // Security: Validate effect type
-                        const allowedEffects = ['waves', 'net', 'dots'];
-                        if (!allowedEffects.includes(type)) {
-                            ErrorHandler.log('Invalid Vanta effect type: ' + type, 'VantaManager');
-                            return;
-                        }
-
-                        // Cleanup previous effect
-                        if (this.currentEffect) {
-                            this.currentEffect.destroy();
-                        }
-
-                        const effectConfigs = {
-                            waves: {
-                                el: element,
-                                color: 0x1a237e,
-                                waveHeight: 15,
-                                shininess: 30,
-                                waveSpeed: 0.75,
-                                zoom: 0.65
-                            },
-                            net: {
-                                el: element,
-                                color: 0x2e7d32,
-                                backgroundColor: 0x000000,
-                                points: 8,
-                                maxDistance: 20,
-                                spacing: 20
-                            },
-                            dots: {
-                                el: element,
-                                color: 0x0277bd,
-                                color2: 0x0288d1,
-                                backgroundColor: 0x000000,
-                                size: 3,
-                                spacing: 30
-                            }
-                        };
-
-                        if (window.VANTA && window.VANTA[type.toUpperCase()]) {
-                            this.currentEffect = window.VANTA[type.toUpperCase()](effectConfigs[type]);
-                        }
-                    } catch (error) {
-                        ErrorHandler.handleSecurely(error, 'Failed to load visual effect');
-                    }
-                }
-            };
-
-            // Secure navigation manager
-            const NavigationManager = {
-                init: function() {
-                    this.setupScrollDetection();
-                    this.setupNavigation();
-                    this.setupKeyboardNavigation();
-                },
-
-                setupScrollDetection: function() {
-                    const sections = document.querySelectorAll('.section');
-                    const navDots = document.querySelectorAll('.nav-dot');
-
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const sectionId = entry.target.id;
-                                const activeNav = document.querySelector(`[data-section="${sectionId}"]`);
-                                
-                                // Update navigation
-                                navDots.forEach(dot => dot.classList.remove('active'));
-                                if (activeNav) {
-                                    activeNav.classList.add('active');
-                                }
-                            }
-                        });
-                    }, {
-                        threshold: 0.3
-                    });
-
-                    sections.forEach(section => observer.observe(section));
-                },
-
-                setupNavigation: function() {
-                    document.querySelectorAll('.nav-dot').forEach(dot => {
-                        const handleClick = (e) => {
-                            e.preventDefault();
-                            const targetId = dot.dataset.section;
-                            const targetElement = document.getElementById(targetId);
+                    if (currentTime - this.lastTime >= 1000) {
+                        this.fps = Math.round((this.frameCount * 1000) / (currentTime - this.lastTime));
+                        if (this.fpsCounter) {
+                            this.fpsCounter.textContent = `${this.fps} FPS`;
                             
-                            if (targetElement) {
-                                targetElement.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                });
-                            }
-                        };
-
-                        dot.addEventListener('click', handleClick);
-                        dot.addEventListener('keydown', (e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                handleClick(e);
-                            }
-                        });
-                    });
-                },
-
-                setupKeyboardNavigation: function() {
-                    document.addEventListener('keydown', (e) => {
-                        const sections = ['hero', 'penumbra', 'veridian', 'mild-fever'];
-                        const currentSection = document.querySelector('.nav-dot.active')?.dataset.section;
-                        const currentIndex = sections.indexOf(currentSection);
-
-                        let targetIndex = currentIndex;
-
-                        switch(e.key) {
-                            case 'ArrowDown':
-                                targetIndex = Math.min(currentIndex + 1, sections.length - 1);
-                                break;
-                            case 'ArrowUp':
-                                targetIndex = Math.max(currentIndex - 1, 0);
-                                break;
-                            default:
-                                return;
-                        }
-
-                        if (targetIndex !== currentIndex) {
-                            e.preventDefault();
-                            const targetElement = document.getElementById(sections[targetIndex]);
-                            if (targetElement) {
-                                targetElement.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                });
+                            // Color coding for performance
+                            const badge = document.getElementById('performanceBadge');
+                            if (this.fps >= 50) {
+                                badge.style.borderColor = '#10b981'; // green
+                            } else if (this.fps >= 30) {
+                                badge.style.borderColor = '#f59e0b'; // yellow
+                            } else {
+                                badge.style.borderColor = '#ef4444'; // red
                             }
                         }
-                    });
-                }
-            };
-
-            // Secure audio player manager
-            const AudioManager = {
-                players: new Map(),
-                currentPlayer: null,
-
-                init: function() {
-                    this.setupAudioPlayers();
-                },
-
-                setupAudioPlayers: function() {
-                    document.querySelectorAll('.audio-player').forEach((playerElement, index) => {
-                        const audio = playerElement.querySelector('.audio-element');
-                        const playBtn = playerElement.querySelector('.play-btn');
-                        const progressBar = playerElement.querySelector('.progress-bar');
-                        const timeDisplay = playerElement.querySelector('.time-display');
-
-                        if (!audio || !playBtn) return;
-
-                        const player = {
-                            audio,
-                            playBtn,
-                            progressBar,
-                            timeDisplay,
-                            isPlaying: false
-                        };
-
-                        this.players.set(index, player);
-                        this.setupPlayerEvents(player, index);
-                    });
-                },
-
-                setupPlayerEvents: function(player, index) {
-                    const { audio, playBtn, progressBar, timeDisplay } = player;
-
-                    // Security: Add error handling for audio loading
-                    audio.addEventListener('error', (e) => {
-                        ErrorHandler.handleSecurely(e, 'Audio failed to load');
-                        playBtn.disabled = true;
-                        playBtn.innerHTML = '<span>×</span>';
-                    });
-
-                    audio.addEventListener('loadstart', () => {
-                        // Security: Validate audio source
-                        if (!audio.src || (!audio.src.includes('.mp3') && !audio.src.includes('.wav') && !audio.src.includes('.ogg'))) {
-                            ErrorHandler.log('Invalid audio source: ' + audio.src, 'AudioManager');
-                            return;
-                        }
-                    });
-
-                    playBtn.addEventListener('click', () => {
-                        if (!Utils.rateLimiter.isAllowed('audio_play')) {
-                            ErrorHandler.handleSecurely(new Error('Rate limit exceeded'), 'Too many requests. Please wait.');
-                            return;
-                        }
-
-                        if (player.isPlaying) {
-                            this.pauseAudio(player);
-                        } else {
-                            this.playAudio(player, index);
-                        }
-                    });
-
-                    audio.addEventListener('timeupdate', () => {
-                        this.updateProgress(player);
-                    });
-
-                    audio.addEventListener('ended', () => {
-                        this.pauseAudio(player);
-                    });
-                },
-
-                playAudio: function(player, index) {
-                    try {
-                        // Pause other players
-                        this.players.forEach((otherPlayer, otherIndex) => {
-                            if (otherIndex !== index && otherPlayer.isPlaying) {
-                                this.pauseAudio(otherPlayer);
-                            }
-                        });
-
-                        player.audio.play().then(() => {
-                            player.isPlaying = true;
-                            player.playBtn.innerHTML = '<span>⏸</span>';
-                            this.currentPlayer = player;
-                        }).catch(error => {
-                            ErrorHandler.handleSecurely(error, 'Failed to play audio');
-                        });
-                    } catch (error) {
-                        ErrorHandler.handleSecurely(error, 'Audio playback error');
+                        
+                        this.frameCount = 0;
+                        this.lastTime = currentTime;
                     }
-                },
-
-                pauseAudio: function(player) {
-                    try {
-                        player.audio.pause();
-                        player.isPlaying = false;
-                        player.playBtn.innerHTML = '<span>▶</span>';
-                        if (this.currentPlayer === player) {
-                            this.currentPlayer = null;
-                        }
-                    } catch (error) {
-                        ErrorHandler.handleSecurely(error, 'Audio pause error');
-                    }
-                },
-
-                updateProgress: function(player) {
-                    if (!player.audio.duration) return;
-
-                    const progress = (player.audio.currentTime / player.audio.duration) * 100;
-                    if (player.progressBar) {
-                        player.progressBar.style.width = progress + '%';
-                    }
-
-                    if (player.timeDisplay) {
-                        const current = this.formatTime(player.audio.currentTime);
-                        const total = this.formatTime(player.audio.duration);
-                        player.timeDisplay.textContent = `${current} / ${total}`;
-                    }
-                },
-
-                formatTime: function(seconds) {
-                    if (!seconds || isNaN(seconds)) return '0:00';
                     
-                    const minutes = Math.floor(seconds / 60);
-                    const secs = Math.floor(seconds % 60);
-                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                    requestAnimationFrame(monitor);
+                };
+                
+                requestAnimationFrame(monitor);
+            }
+        }
+
+        // Custom Cursor Class
+        class CustomCursor {
+            constructor() {
+                this.cursor = document.getElementById('customCursor');
+                this.mouseX = 0;
+                this.mouseY = 0;
+                this.cursorX = 0;
+                this.cursorY = 0;
+                this.isTouch = 'ontouchstart' in window;
+                
+                if (!this.isTouch && this.cursor) {
+                    this.init();
                 }
-            };
+            }
 
-            // Secure logo effects
-            const LogoEffects = {
-                init: function() {
-                    const logo = document.querySelector('.logo');
-                    if (!logo) return;
+            init() {
+                document.addEventListener('mousemove', (e) => {
+                    this.mouseX = e.clientX;
+                    this.mouseY = e.clientY;
+                });
 
-                    logo.addEventListener('click', this.handleLogoClick.bind(this));
-                    logo.addEventListener('keydown', (e) => {
+                // Hover effects
+                document.addEventListener('mouseenter', (e) => {
+                    if (e.target.matches('#mainLogo, #exploreBtn')) {
+                        this.cursor.classList.add('hover');
+                    }
+                }, true);
+
+                document.addEventListener('mouseleave', (e) => {
+                    if (e.target.matches('#mainLogo, #exploreBtn')) {
+                        this.cursor.classList.remove('hover');
+                    }
+                }, true);
+
+                this.animate();
+            }
+
+            animate() {
+                // Smooth cursor following
+                this.cursorX += (this.mouseX - this.cursorX) * 0.1;
+                this.cursorY += (this.mouseY - this.cursorY) * 0.1;
+                
+                this.cursor.style.left = this.cursorX + 'px';
+                this.cursor.style.top = this.cursorY + 'px';
+                
+                requestAnimationFrame(() => this.animate());
+            }
+
+            // Cleanup method
+            destroy() {
+                if (this.cursor) {
+                    this.cursor.classList.add('hidden');
+                }
+            }
+        }
+
+        // Particle System Class
+        class ParticleSystem {
+            constructor() {
+                this.container = document.getElementById('particlesContainer');
+            }
+
+            burst(element) {
+                if (!this.container || !element) return;
+
+                const rect = element.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const particleCount = 20;
+
+                for (let i = 0; i < particleCount; i++) {
+                    this.createParticle(centerX, centerY, i, particleCount);
+                }
+            }
+
+            createParticle(x, y, index, total) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const angle = (index / total) * Math.PI * 2;
+                const velocity = 100 + Math.random() * 100;
+                const size = 4 + Math.random() * 8;
+                const colors = ['#ff6b35', '#4dd0e1', '#9c27b0'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.background = `radial-gradient(circle, ${color} 0%, transparent 70%)`;
+                
+                this.container.appendChild(particle);
+                
+                // Animate particle
+                const animation = particle.animate([
+                    { 
+                        transform: 'translate(0, 0) scale(1)',
+                        opacity: 1
+                    },
+                    { 
+                        transform: `translate(${Math.cos(angle) * velocity}px, ${Math.sin(angle) * velocity}px) scale(0)`,
+                        opacity: 0
+                    }
+                ], {
+                    duration: 1500,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                });
+                
+                animation.onfinish = () => {
+                    if (particle.parentNode) {
+                        particle.parentNode.removeChild(particle);
+                    }
+                };
+            }
+        }
+
+        // Vanta Initialization
+        function initVantaWaves() {
+            if (typeof VANTA !== 'undefined' && typeof THREE !== 'undefined') {
+                try {
+                    VANTA.WAVES({
+                        el: '#vanta-bg',
+                        mouseControls: true,
+                        touchControls: true,
+                        gyroControls: false,
+                        minHeight: 200.00,
+                        minWidth: 200.00,
+                        scale: 1.00,
+                        scaleMobile: 1.00,
+                        color: 0x1a237e,
+                        shininess: 50.00,
+                        waveHeight: 20.00,
+                        waveSpeed: 1.00,
+                        zoom: 0.75
+                    });
+                    console.log('✅ Vanta Waves initialized successfully');
+                    return true;
+                } catch (error) {
+                    console.error('❌ Vanta Waves initialization failed:', error);
+                    return false;
+                }
+            }
+            console.warn('⚠️ VANTA or THREE.js not loaded');
+            return false;
+        }
+
+        // Lazy load Vanta Net effect
+        function loadVantaNet() {
+            return new Promise((resolve, reject) => {
+                if (typeof VANTA.NET !== 'undefined') {
+                    resolve();
+                    return;
+                }
+                
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js';
+                script.onload = () => resolve();
+                script.onerror = () => reject(new Error('Failed to load Vanta Net'));
+                document.head.appendChild(script);
+            });
+        }
+
+        // Main Application
+        class IoApp {
+            constructor() {
+                this.vantaEffect = null;
+                this.performanceMonitor = null;
+                this.customCursor = null;
+                this.particleSystem = null;
+                this.isInitialized = false;
+            }
+
+            async init() {
+                try {
+                    // Wait for fonts to load
+                    await document.fonts.ready;
+                    
+                    // Initialize Vanta Waves
+                    const vantaSuccess = initVantaWaves();
+                    
+                    // Hide loader with improved timing
+                    setTimeout(() => {
+                        const loader = document.getElementById('loader');
+                        if (loader) {
+                            loader.classList.add('fade-out');
+                            setTimeout(() => {
+                                loader.style.display = 'none';
+                            }, 500);
+                        }
+                    }, vantaSuccess ? 500 : 1000);
+                    
+                    // Initialize modules
+                    this.performanceMonitor = new PerformanceMonitor();
+                    this.customCursor = new CustomCursor();
+                    this.particleSystem = new ParticleSystem();
+                    
+                    // Setup event listeners
+                    this.setupEventListeners();
+                    
+                    this.isInitialized = true;
+                    console.log('✅ IoApp initialized successfully');
+                    
+                } catch (error) {
+                    console.error('❌ IoApp initialization failed:', error);
+                    this.handleInitError();
+                }
+            }
+
+            setupEventListeners() {
+                const mainLogo = document.getElementById('mainLogo');
+                const exploreBtn = document.getElementById('exploreBtn');
+
+                // Logo click handler
+                if (mainLogo) {
+                    mainLogo.addEventListener('click', () => this.handleLogoClick());
+                    mainLogo.addEventListener('keydown', (e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
                             this.handleLogoClick();
                         }
                     });
-                },
-
-                handleLogoClick: function() {
-                    const logo = document.querySelector('.logo');
-                    if (!logo) return;
-
-                    logo.classList.add('shake');
-                    setTimeout(() => {
-                        logo.classList.remove('shake');
-                        
-                        // Scroll to first album
-                        const firstAlbum = document.getElementById('penumbra');
-                        if (firstAlbum) {
-                            firstAlbum.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }, 500);
                 }
-            };
 
-            // Initialize all managers securely
-            function initializeApp() {
+                // Explore button handler
+                if (exploreBtn) {
+                    exploreBtn.addEventListener('click', () => this.navigateToAlbums());
+                }
+
+                // Cleanup on page unload
+                window.addEventListener('beforeunload', () => this.cleanup());
+            }
+
+            async handleLogoClick() {
+                const logo = document.getElementById('mainLogo');
+                if (!logo) return;
+
                 try {
-                    LoadingManager.init();
-                    VantaManager.init();
-                    NavigationManager.init();
-                    AudioManager.init();
-                    LogoEffects.init();
+                    // Add shake effect
+                    logo.classList.add('shake');
+                    setTimeout(() => logo.classList.remove('shake'), 500);
+
+                    // Create particle burst
+                    if (this.particleSystem) {
+                        this.particleSystem.burst(logo);
+                    }
+
+                    // Lazy load and switch to NET effect
+                    await loadVantaNet();
+                    if (typeof VANTA.NET !== 'undefined') {
+                        VANTA.NET({
+                            el: '#vanta-bg',
+                            color: 0x2e7d32,
+                            backgroundColor: 0x000000,
+                            points: 10,
+                            maxDistance: 20,
+                            spacing: 20
+                        });
+                        console.log('✅ Switched to Vanta Net effect');
+                    }
+
+                    // Navigate after effects
+                    setTimeout(() => this.navigateToAlbums(), 1500);
+                    
                 } catch (error) {
-                    ErrorHandler.handleSecurely(error, 'Application failed to initialize');
+                    console.error('❌ Logo click handler failed:', error);
+                    // Fallback navigation
+                    setTimeout(() => this.navigateToAlbums(), 500);
                 }
             }
 
-            // Secure initialization
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initializeApp);
-            } else {
-                initializeApp();
+            navigateToAlbums() {
+                window.location.href = 'https://ljvyjvgs.gensparkspace.com/';
             }
 
-            // Security: Cleanup on page unload
-            window.addEventListener('beforeunload', function() {
-                // Cleanup Vanta effects
-                if (VantaManager.currentEffect) {
-                    VantaManager.currentEffect.destroy();
+            handleInitError() {
+                // Fallback mode
+                document.body.classList.add('fallback-mode');
+                
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.style.display = 'none';
                 }
                 
-                // Pause all audio
-                AudioManager.players.forEach(player => {
-                    if (player.audio) {
-                        player.audio.pause();
-                        player.audio.src = '';
-                        player.audio.load();
-                    }
-                });
-            });
+                console.log('🔄 Running in fallback mode');
+            }
 
-        })();
+            cleanup() {
+                if (this.customCursor) {
+                    this.customCursor.destroy();
+                }
+                
+                if (this.vantaEffect && typeof this.vantaEffect.destroy === 'function') {
+                    this.vantaEffect.destroy();
+                }
+                
+                console.log('🧹 Cleanup completed');
+            }
+        }
+
+        // Initialize application
+        const app = new IoApp();
+
+        // Enhanced loader logic with proper timing
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                app.init();
+            }, 100); // Small delay to ensure all resources are ready
+        });
+
+        // Fallback initialization if window.load doesn't fire
+        if (document.readyState === 'complete') {
+            setTimeout(() => app.init(), 100);
+        } else {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => app.init(), 100);
+            });
+        }
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"968c4f8e9bee29a2","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.7.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDgVjrN4JLfekD5zpPCtOA%2BWMpw7%2FGaurqWBxPvqSeVyXENqH8Rq8MGnypVGWIo99ahokrrI33W8colA5MAiDud%2BWI1NbzKutOTmKbAR%2Bx5Bayi5jmyKk1VjCPYpQpe5UnjBmmjBZTsfa%2F%2FQ2faF%2BZSQ1YjwB%2FbvNd3oJQbEOJX5LRreRJ15DCcqNa53dkxP%2BZxoKx070wFBjyBMKP464BhOO4A6d0PMV52iavsu5KzLCSkRhAxwBYneIQeixaMkzWft05HbJk%2F9CEV7Knco7f18001LVEhVlguSWLcPo0ihJcMpA2kTtc%2B3KJK6sMy7GwK2BVvOX1tyDQN%2BKCfiuW7dJQQN55UteO9eY%2FshoR5uJ7C5BFESdFoTPSGJz3PbFL9DwFbe%2BZfW0K2FegSPdAKRcndZomLDBgS5LPH%2FLIvDi1LTxQHz5drrUybPB1uJqh04hKFD05MHNZBveXBlRb7PKKdoJ%2B8E3P6mdhGmRRggDBUrrLIdQ4ssCdY67I%2F5FQ89t1qUIKcdRYx5y%2B9wWPzo%3D";
-        window.__genspark_locale = "en-US";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDgVjrN4JLfekD5zpPCtOA+WMpw7/GaurqWBxPvqSeVyXENqH8Rq8MGnypVGWIo99ahokrrI33W8colA5MAiDud+WI1NbzKutOTmKbAR+x5Bayi5jmyKk1VjCPYpQpe5UnjBmmjBZTsfa//Q2faF+ZSQ1YjwB/bvNd3oJQbEOJX5LRreRJ15DCcqNa53dkxP+ZxoKx070wFBjyBMKP464BhOO4A6d0PMV52iavsu5KzLCSkRhAxwBYneIQeixaMkzWft05HbJk/9CEV7Knco7f18001LVEhVlguSWLcPo0ihJcMpA2kTtc+3KJK6sMy7GwK2BVvOX1tyDQN+KCfiuW7dJQQN55UteO9eY/shoR5uJ7C5BFESdFoTPSGJz3PbFL9DwFbe+ZfW0K2FegSPdAKRcndZomLDBgS5LPH/LIvDi1LTxQHz5drrUybPB1uJqh04hKFD05MHNZBveXBlRb7PKKdoJ+8E3P6mdhGmRRggDBUrrLIdQ4ssCdY67I/5FQ89t1qUIKcdRYx5y+9wWPzo=";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    
